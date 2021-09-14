@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import {useTodoState, useTodoDispatch} from '../../context/TodoContext';
+import {useTodoDispatch, useTodoNextId} from '../../context/TodoContext';
 
-const Form = styled.div`
+const Form = styled.form`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,13 +28,32 @@ const Input = styled.input`
 `;
 
 function TodoForm() {
+    const nextId = useTodoNextId();
+    const dispatch = useTodoDispatch();
     const [input, setInput] = useState('');
 
+    const onCreate = e => {
+        e.preventDefault();
+        setInput('');
+        dispatch({
+            type: 'CREATE',
+            todo: {
+                id: nextId.current,
+                text: input,
+                done: false,
+            }
+        });
+        nextId.current++;
+    };
+
     return (
-        <Form>
-            <Input autoFocus placeholder="일정을 작성하고, Enter를 눌러 주세요." value={input} onChange={(e) => setInput(e.target.value)}/>
+        <Form onSubmit={onCreate}>
+            <Input autoFocus 
+                placeholder="일정을 작성하고, Enter를 눌러 주세요." 
+                value={input} 
+                onChange={e => setInput(e.target.value)}/>
         </Form>
     )
 }
 
-export default TodoForm
+export default React.memo(TodoForm);

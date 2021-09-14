@@ -3,18 +3,18 @@ import React, {useReducer, useRef, useContext, createContext} from 'react';
 const initialTodos = [
     {
         id: 1,
-        text: "Item1",
+        text: "아침먹기",
         done: true,
     },
     {
         id: 2,
-        text: "Item2",
-        done: true,
+        text: "공부하기",
+        done: false,
     },
     {
         id: 3,
-        text: "Item3",
-        done: false,
+        text: "강아지산책하기",
+        done: true,
     },
 ];
 

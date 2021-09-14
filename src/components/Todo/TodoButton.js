@@ -44,7 +44,7 @@ const CircleButton = styled.button`
             &:active{
                 background: #fa5252;
             }
-            transform: translate(0, 55%) rotate(45deg);
+            transform: translate(0, 60%) rotate(45deg);
         `
     }
 `;
