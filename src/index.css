@@ -47,3 +47,10 @@ code {
   border-radius: 20px;
   box-shadow: 0 0 8px 0 rgba(0,0,0, .1);
 }
+
+footer{
+  text-align: center;
+  padding: 10px;
+  margin-top: 70px;
+  color: #424242;
+}
