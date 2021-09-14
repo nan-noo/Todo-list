@@ -1,0 +1,25 @@
+.TodoHeader{
+    padding: 20px 30px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.TodoHeader > h1{
+    margin: 20px 0 0;
+}
+
+.TodoHeader > .day{
+    margin: 0;
+    color: #8d8d8d;
+    font-size: 18px;
+}
+
+.TodoHeader > .description{
+    color: #00e676;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.TodoList{
+    padding: 10px 30px 15px;
+    flex: 1;
+}
