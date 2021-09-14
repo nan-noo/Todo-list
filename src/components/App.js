@@ -1,10 +1,10 @@
 import React from 'react';
-
-import './Todo/Todo.css';
+import {AiOutlineSmile} from 'react-icons/ai';
 import Wrapper from './Wrapper/Wrapper';
 import TodoHeader from './Todo/TodoHeader';
 import TodoList from './Todo/TodoList';
 import TodoButton from './Todo/TodoButton';
+import './Todo/Todo.css';
 
 import TodoProvider from '../context/TodoContext';
 
@@ -18,6 +18,7 @@ function App() {
           <TodoButton/>
         </Wrapper>
       </TodoProvider>
+      <footer>nannoo<AiOutlineSmile/></footer>
     </div>
 
   );
