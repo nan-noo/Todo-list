@@ -38,17 +38,23 @@ function todoReducer(state, action){
 // context & custom hooks
 const TodoStateContext = createContext();
 export function useTodoState(){
-    return useContext(TodoStateContext) || new Error('Cannot find TodoProvider');
+    const state = useContext(TodoStateContext);
+    if(!state) throw new Error('Cannot find TodoProvider');
+    return state; 
 }
 
 const TodoDispatchContext = createContext();
 export function useTodoDispatch(){
-    return useContext(TodoDispatchContext) || new Error('Cannot find TodoProvider');
+    const dispatch = useContext(TodoDispatchContext);
+    if(!dispatch) throw new Error('Cannot find TodoProvider');
+    return dispatch;
 }
 
 const TodoNextIdContext = createContext();
 export function useTodoNextId(){
-    return useContext(TodoNextIdContext) || new Error('Cannot find TodoProvider');
+    const nextId = useContext(TodoNextIdContext);
+    if(!nextId) throw new Error('Cannot find TodoProvider');
+    return nextId;
 }
 
 // provider
