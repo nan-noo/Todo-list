@@ -3,6 +3,7 @@ create-react-app
 
 test here    
 <a href="https://nan-noo.github.io/todo-list/">LINK</a>    
+deploy: gh-pages
 ***
 |modules|
 |---|
